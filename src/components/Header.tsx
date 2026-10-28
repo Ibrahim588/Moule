@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MessageCircle, Menu, X, Phone, Globe } from "lucide-react";
+import { MessageCircle, Menu, X, Phone } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { buildWhatsAppInquiryUrl } from "@/lib/whatsapp";
 
@@ -54,19 +54,8 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Right Action Icons (Language, Phone, WhatsApp) */}
+          {/* Right Action Icons (Phone, WhatsApp) */}
           <div className="hidden sm:flex items-center gap-4">
-            {/* Language indicator */}
-            <button
-              type="button"
-              className="flex items-center gap-1.5 text-xs text-moule-espresso/60 hover:text-moule-espresso px-2 py-1 rounded-md transition-colors"
-              title="اللغة: العربية (متاحة أيضاً بالإنجليزية)"
-              aria-label="تبديل اللغة"
-            >
-              <Globe className="w-3.5 h-3.5 text-moule-champagne" />
-              <span className="font-sans font-medium">العربية / EN</span>
-            </button>
-
             {/* Direct Phone link */}
             <a
               href={`tel:${siteConfig.phoneRaw}`}
