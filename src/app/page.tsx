@@ -19,6 +19,7 @@ import { siteConfig } from "@/config/site";
 import { occasionCollections, featuredHospitalityItems } from "@/data/catalogue";
 import OccasionCard from "@/components/OccasionCard";
 import { buildWhatsAppInquiryUrl } from "@/lib/whatsapp";
+import { WhatsAppIcon, TikTokIcon } from "@/components/Icons";
 
 export default function HomePage() {
   const verifiedBranch = siteConfig.branches.find((b) => b.isVerified);
@@ -209,7 +210,7 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   className="px-3 py-1.5 rounded-full bg-moule-sand hover:bg-moule-champagne/20 text-moule-espresso text-xs font-semibold inline-flex items-center gap-1.5 transition-colors"
                 >
-                  <MessageCircle className="w-3.5 h-3.5 text-moule-champagne" />
+                  <WhatsAppIcon className="w-3.5 h-3.5 text-moule-champagne" />
                   <span>استفسار</span>
                 </a>
               </div>
@@ -413,8 +414,8 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="px-4 py-2 rounded-full border border-moule-beige bg-white text-xs font-semibold text-moule-espresso hover:text-moule-champagne flex items-center gap-1.5 transition-colors shadow-sm"
             >
-              <span>TikTok</span>
-              <ExternalLink className="w-3 h-3 text-moule-champagne" />
+              <TikTokIcon className="w-3.5 h-3.5" />
+              <span>@moule.official</span>
             </a>
           </div>
         </div>
@@ -549,7 +550,7 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   className="text-xs font-semibold text-moule-espresso hover:text-moule-champagne inline-flex items-center gap-1"
                 >
-                  <MessageCircle className="w-3.5 h-3.5 text-moule-champagne" />
+                  <WhatsAppIcon className="w-3.5 h-3.5 text-moule-champagne" />
                   <span>تواصل عبر واتساب للاستفسار عن موقع الفرع ←</span>
                 </a>
               </div>

@@ -6,6 +6,7 @@ import { Sparkles, Search, MessageCircle, ArrowLeft, Filter } from "lucide-react
 import { occasionCollections, featuredHospitalityItems } from "@/data/catalogue";
 import OccasionCard from "@/components/OccasionCard";
 import { buildWhatsAppInquiryUrl } from "@/lib/whatsapp";
+import { WhatsAppIcon } from "@/components/Icons";
 
 const categories = [
   { id: "all", label: "جميع المناسبات" },
@@ -162,7 +163,7 @@ export default function CataloguePage() {
                   rel="noopener noreferrer"
                   className="px-3 py-1.5 rounded-full bg-moule-sand text-moule-espresso text-xs font-medium hover:bg-moule-champagne/20 transition-colors inline-flex items-center gap-1"
                 >
-                  <MessageCircle className="w-3.5 h-3.5 text-moule-champagne" />
+                  <WhatsAppIcon className="w-3.5 h-3.5 text-moule-champagne" />
                   <span>طلب</span>
                 </a>
               </div>

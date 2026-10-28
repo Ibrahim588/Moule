@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { QuoteFormData } from "@/types";
 import { buildWhatsAppQuotationUrl, generateQuoteTextSummary } from "@/lib/whatsapp";
+import { WhatsAppIcon } from "@/components/Icons";
 
 function QuotationFormContent() {
   const searchParams = useSearchParams();
@@ -310,7 +311,7 @@ function QuotationFormContent() {
               disabled={isSubmitting}
               className="w-full sm:flex-1 py-4 px-8 rounded-full bg-moule-espresso text-moule-ivory font-semibold text-xs sm:text-sm hover:bg-moule-espresso/90 flex items-center justify-center gap-2 shadow-luxury transition-all disabled:opacity-50"
             >
-              <MessageCircle className="w-4 h-4 text-moule-champagne" />
+              <WhatsAppIcon className="w-4 h-4 text-moule-champagne" />
               <span>إرسال وتجهيز الطلب عبر واتساب</span>
             </button>
 

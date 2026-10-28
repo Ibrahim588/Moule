@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { ArrowLeft, MessageCircle } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { OccasionCollection } from "@/types";
 import { buildWhatsAppInquiryUrl } from "@/lib/whatsapp";
+import { WhatsAppIcon } from "@/components/Icons";
 
 export default function OccasionCard({ collection }: { collection: OccasionCollection }) {
   return (
@@ -65,7 +66,7 @@ export default function OccasionCard({ collection }: { collection: OccasionColle
             className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-moule-sand hover:bg-moule-champagne/20 text-moule-espresso text-xs font-medium transition-colors"
             title={`طلب استفسار واتساب عن ${collection.titleAr}`}
           >
-            <MessageCircle className="w-3.5 h-3.5 text-moule-champagne" />
+            <WhatsAppIcon className="w-3.5 h-3.5 text-moule-champagne" />
             <span className="text-[11px]">استفسار سريع</span>
           </a>
         </div>

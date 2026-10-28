@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { buildWhatsAppInquiryUrl } from "@/lib/whatsapp";
+import { WhatsAppIcon, TikTokIcon } from "@/components/Icons";
 
 export const metadata = {
   title: "الفروع والموقع في جدة | موليه للضيافة الفاخرة",
@@ -121,7 +122,7 @@ export default function BranchesPage() {
                 rel="noopener noreferrer"
                 className="flex-1 py-3 px-4 rounded-xl bg-moule-espresso text-moule-ivory text-xs font-semibold flex items-center justify-center gap-2 hover:bg-moule-espresso/90 shadow-sm"
               >
-                <MessageCircle className="w-4 h-4 text-moule-champagne" />
+                <WhatsAppIcon className="w-4 h-4 text-moule-champagne" />
                 <span>واتساب الفرع</span>
               </a>
               <a
@@ -164,7 +165,10 @@ export default function BranchesPage() {
           </div>
 
           <div className="p-6 rounded-2xl bg-moule-sand/40 border border-moule-beige space-y-2">
-            <span className="text-xs font-bold text-moule-champagne">تيك توك</span>
+            <span className="text-xs font-bold text-moule-champagne flex items-center justify-center gap-1.5">
+              <TikTokIcon className="w-3.5 h-3.5" />
+              <span>تيك توك</span>
+            </span>
             <a
               href={siteConfig.social.tiktok}
               target="_blank"

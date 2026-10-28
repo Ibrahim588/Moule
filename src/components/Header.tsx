@@ -3,9 +3,10 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MessageCircle, Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { buildWhatsAppInquiryUrl } from "@/lib/whatsapp";
+import { WhatsAppIcon } from "@/components/Icons";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -73,7 +74,7 @@ export default function Header() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-moule-espresso text-moule-ivory px-4 py-2 rounded-full text-xs font-semibold hover:bg-moule-espresso/90 hover:shadow-md transition-all border border-moule-espresso"
             >
-              <MessageCircle className="w-4 h-4 text-moule-champagne" />
+              <WhatsAppIcon className="w-4 h-4 text-moule-champagne" />
               <span>محادثة واتساب</span>
             </a>
           </div>
@@ -87,7 +88,7 @@ export default function Header() {
               className="p-2 text-moule-espresso bg-moule-beige/50 rounded-full"
               aria-label="واتساب سريع"
             >
-              <MessageCircle className="w-5 h-5 text-moule-champagne" />
+              <WhatsAppIcon className="w-5 h-5 text-moule-champagne" />
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -124,7 +125,7 @@ export default function Header() {
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-moule-espresso text-moule-ivory py-3 rounded-xl text-sm font-semibold shadow-sm"
             >
-              <MessageCircle className="w-4 h-4 text-moule-champagne" />
+              <WhatsAppIcon className="w-4 h-4 text-moule-champagne" />
               <span>استفسار فوري عبر واتساب</span>
             </a>
             <a

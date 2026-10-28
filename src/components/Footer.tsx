@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { Instagram, MapPin, Phone, MessageCircle, ArrowUpRight, ShieldCheck } from "lucide-react";
+import { Instagram, MapPin, Phone, ArrowUpRight, ShieldCheck } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { buildWhatsAppInquiryUrl } from "@/lib/whatsapp";
+import { WhatsAppIcon, TikTokIcon } from "@/components/Icons";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -33,7 +34,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="px-6 py-2.5 rounded-full border border-moule-champagne/50 text-moule-ivory text-xs font-medium hover:bg-white/10 transition-colors inline-flex items-center gap-2"
             >
-              <MessageCircle className="w-3.5 h-3.5 text-moule-champagne" />
+              <WhatsAppIcon className="w-3.5 h-3.5 text-moule-champagne" />
               <span>محادثة واتساب سريعة</span>
             </a>
           </div>
@@ -72,10 +73,10 @@ export default function Footer() {
                 href={siteConfig.social.tiktok}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-moule-ivory/10 flex items-center justify-center text-moule-champagne hover:bg-moule-champagne hover:text-moule-espresso transition-all font-bold text-xs"
+                className="w-10 h-10 rounded-full bg-moule-ivory/10 flex items-center justify-center text-moule-champagne hover:bg-moule-champagne hover:text-moule-espresso transition-all"
                 aria-label="TikTok @moule.official"
               >
-                <span>TT</span>
+                <TikTokIcon className="w-4 h-4" />
               </a>
               <a
                 href={buildWhatsAppInquiryUrl()}
@@ -84,7 +85,7 @@ export default function Footer() {
                 className="w-10 h-10 rounded-full bg-moule-ivory/10 flex items-center justify-center text-moule-champagne hover:bg-moule-champagne hover:text-moule-espresso transition-all"
                 aria-label="WhatsApp"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4" />
               </a>
             </div>
           </div>

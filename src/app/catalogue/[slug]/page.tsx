@@ -13,6 +13,7 @@ import {
 import { occasionCollections } from "@/data/catalogue";
 import { buildWhatsAppInquiryUrl } from "@/lib/whatsapp";
 import OccasionCard from "@/components/OccasionCard";
+import { WhatsAppIcon } from "@/components/Icons";
 
 interface Props {
   params: {
@@ -174,7 +175,7 @@ export default function CollectionDetailPage({ params }: Props) {
               rel="noopener noreferrer"
               className="w-full py-4 px-6 rounded-full bg-moule-espresso text-moule-ivory font-semibold text-xs sm:text-sm hover:bg-moule-espresso/90 flex items-center justify-center gap-2 shadow-md transition-all"
             >
-              <MessageCircle className="w-4 h-4 text-moule-champagne" />
+              <WhatsAppIcon className="w-4 h-4 text-moule-champagne" />
               <span>طلب تفاصيل وحجز المجموعة عبر واتساب</span>
             </a>
 
